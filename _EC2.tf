@@ -40,7 +40,7 @@ resource "aws_instance" "public_ec2_1" {
   subnet_id              = aws_subnet.public_subnet_1.id
   vpc_security_group_ids = [aws_security_group.public_sg.id] 
   iam_instance_profile   = aws_iam_instance_profile.ec2_admin_instance_profile.name
-  user_data = file("${path.module}/userdata_1.sh")
+  user_data = file("${path.module}/userdata/userdata_1.sh")
   tags = {
     Name = "${var.tags["name"]}-Pub-ec2-1"
   }
@@ -53,7 +53,7 @@ resource "aws_instance" "public_ec2_2" {
   subnet_id            = aws_subnet.public_subnet_2.id
   vpc_security_group_ids = [aws_security_group.public_sg.id]  
   iam_instance_profile = aws_iam_instance_profile.ec2_admin_instance_profile.name
-  user_data = file("${path.module}/userdata_2.sh")
+  user_data = file("${path.module}/userdata/userdata_2.sh")
   tags = {
     Name = "${var.tags["name"]}-Pub-ec2-2"
   }
@@ -67,7 +67,7 @@ resource "aws_instance" "public_ec2_3" {
   vpc_security_group_ids = [aws_security_group.public_sg.id]  
   iam_instance_profile = aws_iam_instance_profile.ec2_admin_instance_profile.name
   associate_public_ip_address = true
-  user_data = file("${path.module}/userdata_3.sh")
+  user_data = file("${path.module}/userdata/userdata_3.sh")
   tags = {
     Name = "${var.tags["name"]}-Pub-ec2-3"
   }

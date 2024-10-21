@@ -113,4 +113,3 @@ resource "aws_nat_gateway" "nat_gateway_1" {
     Name = "${var.tags["name"]}-NAT"
   }
 }
-

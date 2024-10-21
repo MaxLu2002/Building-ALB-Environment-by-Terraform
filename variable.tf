@@ -21,7 +21,7 @@ variable "region" {
 variable "tags" {
   type = map(string)
   default = {
-    name = "max-TestALB"
+    name = "max-test"
   }
 }
 
