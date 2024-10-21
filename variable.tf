@@ -10,7 +10,7 @@
 # ---------- 定義 AWS 提供者
 provider "aws" {
   region  = var.region
-  profile = "intern"
+  profile = "account1"
 }
 
 variable "region" {
@@ -21,7 +21,7 @@ variable "region" {
 variable "tags" {
   type = map(string)
   default = {
-    name = "max-test"
+    name = "test"
   }
 }
 
